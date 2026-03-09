@@ -1,0 +1,7 @@
+project_id = "zawkbketcksdnlcfpyug"
+
+[functions.generate-roadmap]
+verify_jwt = false
+
+[functions.regenerate-skill]
+verify_jwt = false
