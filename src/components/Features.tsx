@@ -38,18 +38,26 @@ const Features = () => {
   useEffect(() => {
     if (!sectionRef.current) return;
     const ctx = gsap.context(() => {
-      gsap.from(".feature-card", {
-        y: 40,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          once: true,
+      gsap.fromTo(".feature-card",
+        {
+          y: 40,
+          opacity: 0
         },
-      });
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 85%",
+            once: true,
+            // Ensure visibility if ScrollTrigger is bypassed or fails
+            onEnter: () => gsap.to(".feature-card", { opacity: 1, y: 0, stagger: 0.1 })
+          },
+        }
+      );
     }, sectionRef);
     return () => ctx.revert();
   }, []);
