@@ -113,22 +113,32 @@ const HeroSection = () => {
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 overflow-hidden">
       {/* Radial glow behind hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-[radial-gradient(ellipse,hsl(250_75%_55%/0.06),transparent_70%)] pointer-events-none" />
-      
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="relative z-10 text-center max-w-3xl mx-auto"
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/15 bg-primary/5 mb-8"
-        >
-          <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm text-primary font-semibold">AI-powered learning paths</span>
-        </motion.div>
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/15 bg-primary/5"
+          >
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm text-primary font-semibold">AI-powered learning paths</span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card/50"
+          >
+            <span className="text-sm text-muted-foreground font-medium">A <span className="text-foreground font-bold text-primary">DevX</span> Studio Project</span>
+          </motion.div>
+        </div>
 
         <h1 className="text-5xl md:text-7xl font-bold font-display tracking-tight mb-6 leading-[1.1] text-foreground">
           Start with what you
@@ -153,11 +163,10 @@ const HeroSection = () => {
         >
           <div
             ref={inputWrapperRef}
-            className={`relative flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 p-2 rounded-2xl border bg-card transition-all duration-300 ${
-              isFocused
+            className={`relative flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 p-2 rounded-2xl border bg-card transition-all duration-300 ${isFocused
                 ? "border-primary/30 shadow-[0_0_0_4px_hsl(250_75%_55%/0.08)]"
                 : "border-border glow-border"
-            }`}
+              }`}
           >
             <input
               type="text"
@@ -179,7 +188,7 @@ const HeroSection = () => {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-          
+
           {/* Subtle helper text */}
           <motion.p
             initial={{ opacity: 0 }}

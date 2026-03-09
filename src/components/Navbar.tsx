@@ -38,11 +38,10 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-card/80 backdrop-blur-xl border-b border-border shadow-sm"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
         <Link to="/" className="flex items-center gap-2">
@@ -51,6 +50,7 @@ const Navbar = () => {
           </div>
           <span className="font-display font-bold text-xl text-foreground">
             Reverse<span className="text-primary">Learning</span>
+            <span className="ml-1.5 text-[10px] uppercase tracking-wider text-muted-foreground font-medium opacity-70">by DevX</span>
           </span>
         </Link>
 
