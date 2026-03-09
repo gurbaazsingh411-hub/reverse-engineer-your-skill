@@ -39,8 +39,8 @@ const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-card/80 backdrop-blur-xl border-b border-border shadow-sm"
-          : "bg-transparent"
+        ? "bg-card/80 backdrop-blur-xl border-b border-border shadow-sm"
+        : "bg-transparent"
         }`}
     >
       <div className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
@@ -48,9 +48,9 @@ const Navbar = () => {
           <div className="p-1.5 rounded-lg bg-primary/10">
             <Sparkles className="w-3.5 h-3.5 text-primary" />
           </div>
-          <span className="font-display font-bold text-xl text-foreground">
+          <span className="font-display font-bold text-xl text-foreground flex items-center gap-2">
             Reverse<span className="text-primary">Learning</span>
-            <span className="ml-1.5 text-[10px] uppercase tracking-wider text-muted-foreground font-medium opacity-70">by DevX</span>
+            <span className="px-2 py-0.5 rounded-md bg-primary/10 text-[10px] uppercase tracking-tighter text-primary font-black border border-primary/20">by DevX</span>
           </span>
         </Link>
 

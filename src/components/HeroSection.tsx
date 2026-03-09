@@ -125,26 +125,35 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/15 bg-primary/5"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 shadow-sm"
           >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-primary font-semibold">AI-powered learning paths</span>
+            <span className="text-sm text-primary font-bold">AI PATHS</span>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card/50"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 shadow-[0_0_15px_rgba(var(--primary),0.1)]"
           >
-            <span className="text-sm text-muted-foreground font-medium">A <span className="text-foreground font-bold text-primary">DevX</span> Studio Project</span>
+            <span className="text-sm font-semibold tracking-tight">A <span className="text-primary font-bold">DevX</span> Project</span>
           </motion.div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold font-display tracking-tight mb-6 leading-[1.1] text-foreground">
+        <h1 className="text-5xl md:text-7xl font-bold font-display tracking-tight mb-4 leading-[1.1] text-foreground">
           Start with what you
           <br />
           <span className="text-gradient">want to build.</span>
         </h1>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mb-8"
+        >
+          <span className="text-xs uppercase tracking-[0.3em] text-primary/60 font-bold">Powered by DevX AI</span>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -164,8 +173,8 @@ const HeroSection = () => {
           <div
             ref={inputWrapperRef}
             className={`relative flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 p-2 rounded-2xl border bg-card transition-all duration-300 ${isFocused
-                ? "border-primary/30 shadow-[0_0_0_4px_hsl(250_75%_55%/0.08)]"
-                : "border-border glow-border"
+              ? "border-primary/30 shadow-[0_0_0_4px_hsl(250_75%_55%/0.08)]"
+              : "border-border glow-border"
               }`}
           >
             <input

@@ -58,8 +58,8 @@ const Features = () => {
     <section ref={sectionRef} className="px-4 py-24 relative z-10">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary mb-3 block">
-            Features
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-3 block">
+            DevX Features
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Everything you need to learn smarter
@@ -79,7 +79,7 @@ const Features = () => {
               >
                 {/* Subtle gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`} />
-                
+
                 <div className="relative">
                   <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-4 shadow-sm`}>
                     <Icon className="w-5 h-5 text-primary-foreground" />
